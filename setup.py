@@ -16,7 +16,7 @@ else:
 
 if ON_COLAB:
     # there are some generic files, maybe externalize?
-    required_files = ['requirements.txt']
+    required_files = ['txt/requirements.txt']
     print("Downloading required files ...")
     for file in required_files:
         cmd = ' '.join(
