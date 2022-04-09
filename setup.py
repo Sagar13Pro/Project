@@ -1,7 +1,8 @@
-   
+
 #!/usr/bin/python3
 
-import sys, os
+import sys
+import os
 
 ON_COLAB = 'google.colab' in sys.modules
 if ON_COLAB:
@@ -18,12 +19,13 @@ if ON_COLAB:
     required_files = ['requirements.txt']
     print("Downloading required files ...")
     for file in required_files:
-        cmd = ' '.join(['wget', '-P', os.path.dirname(BASE_DIR+'/'+file), GIT_ROOT+'/'+file])
+        cmd = ' '.join(
+            ['wget', '-P', os.path.dirname(BASE_DIR+'/'+file), GIT_ROOT+'/'+file])
         print('!'+cmd)
         os.system(cmd)
 
     print("\nAdditional setup ...")
-    setup_cmds = ['pip install -r requirements.txt']
+    setup_cmds = ['pip install -r ./requirements.txt']
 
     for cmd in setup_cmds:
         print('!'+cmd)
