@@ -25,7 +25,7 @@ if ON_COLAB:
         os.system(cmd)
 
     print("\nAdditional setup ...")
-    print(BASE_DIR)
+    print(f"Folder:::::::::::::{BASE_DIR}")
     setup_cmds = ['pip install -r requirements.txt']
 
     for cmd in setup_cmds:
